@@ -36,27 +36,36 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void changeClicked(View view) {
+        if(switchBtn.isChecked())
+        {
+            changeColorRB();
+        }
     }
 
     public void clickedRBtn(View view) {
         if(!switchBtn.isChecked())
         {
-            if(rBRed.isChecked())
-            {
-                screenL.setBackgroundColor(Color.parseColor("#E89494"));
-            }
-            else if(rBBlue.isChecked())
-            {
-                screenL.setBackgroundColor(Color.parseColor("#BDDDF1"));
-            }
-            else if(rBYellow.isChecked())
-            {
-                screenL.setBackgroundColor(Color.parseColor("#F6DFB9"));
-            }
-            else
-            {
-                screenL.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            }
+            changeColorRB();
+        }
+    }
+
+    public void changeColorRB()
+    {
+        if(rBRed.isChecked())
+        {
+            screenL.setBackgroundColor(Color.parseColor("#E89494"));
+        }
+        else if(rBBlue.isChecked())
+        {
+            screenL.setBackgroundColor(Color.parseColor("#BDDDF1"));
+        }
+        else if(rBYellow.isChecked())
+        {
+            screenL.setBackgroundColor(Color.parseColor("#F6DFB9"));
+        }
+        else
+        {
+            screenL.setBackgroundColor(Color.parseColor("#FDF6FE"));
         }
     }
 }
